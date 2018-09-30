@@ -126,12 +126,10 @@ class ValueIterationAgent(ValueEstimationAgent):
         #         return action
         #
         # print("failure")
-        print("begin")
-        print(possible_actions)
+
         for action in possible_actions:
             if self.computeQValueFromValues(state, action) == self.values[state]:
                 return action
-
 
 
     def getPolicy(self, state):
@@ -173,6 +171,28 @@ class AsynchronousValueIterationAgent(ValueIterationAgent):
 
     def runValueIteration(self):
         "*** YOUR CODE HERE ***"
+        counter = 0
+        while(counter<self.iterations):
+
+            for state in self.mdp.getStates():
+                counter+=1
+                if(counter>self.iterations):
+                    break
+                possible_actions = self.mdp.getPossibleActions(state)
+
+                if(len(possible_actions) == 0):
+                    x = 3
+                else:
+                    action_evaluation_list = []
+
+                    for action in possible_actions:
+                        sum = 0.
+
+                        for (next_state,proba) in self.mdp.getTransitionStatesAndProbs(state, action):
+                            sum+= proba*(self.mdp.getReward(state, action, next_state) + self.discount * self.values[next_state])
+
+                        action_evaluation_list.append(sum)
+                    self.values[state] = max(action_evaluation_list)
 
 class PrioritizedSweepingValueIterationAgent(AsynchronousValueIterationAgent):
     """
