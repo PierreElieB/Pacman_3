@@ -121,7 +121,7 @@ class ValueIterationAgent(ValueEstimationAgent):
             for (next_state,proba) in self.mdp.getTransitionStatesAndProbs(state, action):
                 sum+= proba*(self.mdp.getReward(state, action, next_state) + self.discount * self.values[next_state])
 
-            if(sum == self.values[state]):
+            if(abs(sum - self.values[state])<0.01):
                 return action
 
         # if(self.mdp.isTerminal(state)):
