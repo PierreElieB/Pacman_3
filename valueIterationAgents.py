@@ -168,7 +168,6 @@ class AsynchronousValueIterationAgent(ValueIterationAgent):
         ValueIterationAgent.__init__(self, mdp, discount, iterations)
 
     def runValueIteration(self):
-        "*** YOUR CODE HERE ***"
         counter = 0
         while(counter<self.iterations):
 
@@ -209,5 +208,44 @@ class PrioritizedSweepingValueIterationAgent(AsynchronousValueIterationAgent):
         self.theta = theta
         ValueIterationAgent.__init__(self, mdp, discount, iterations)
 
+    def predecessor_computation(self):
+        """
+        """
+        dic = {}
+        for state in self.mdp.getStates():
+            dic[state] = set()
+
+        for state in self.mdp.getStates():
+            possible_actions  = self.mdp.getPossibleActions(state)
+
+            for action in possible_actions:
+                for (next_state, proba) in self.mdp.getTransitionStatesAndProbs(state, action):
+                    if(proba>0):
+                        dic[next_state].add(state)
+        return dic
+
     def runValueIteration(self):
         "*** YOUR CODE HERE ***"
+
+        predecessor_dic = self.predecessor_computation()
+        queue = util.PriorityQueue()
+
+        for state in self.mdp.getStates():
+            if not self.mdp.isTerminal(state):
+                possible_actions = self.mdp.getPossibleActions(state)
+                diff = abs(self.values[state] - max([self.computeQValueFromValues(state, action) for action in possible_actions]))
+                queue.push(state, -diff)
+
+        for i in range(self.iterations):
+            if(queue.isEmpty()):
+                break
+            else:
+                state = queue.pop()
+                possible_actions = self.mdp.getPossibleActions(state)
+                self.values[state] = max([self.computeQValueFromValues(state, action) for action in possible_actions])
+
+                for predecessor in predecessor_dic[state]:
+                    possible_actions = self.mdp.getPossibleActions(predecessor)
+                    diff = abs(self.values[predecessor] - max([self.computeQValueFromValues(predecessor, action) for action in possible_actions]))
+                    if(diff > self.theta):
+                        queue.update(predecessor, -diff)
