@@ -116,22 +116,19 @@ class ValueIterationAgent(ValueEstimationAgent):
         """
         possible_actions = self.mdp.getPossibleActions(state)
 
-        for action in possible_actions:
-            sum = 0.
-            for (next_state,proba) in self.mdp.getTransitionStatesAndProbs(state, action):
-                sum+= proba*(self.mdp.getReward(state, action, next_state) + self.discount * self.values[next_state])
-
-            if(abs(sum - self.values[state])<0.01):
-                return action
-
-        # if(self.mdp.isTerminal(state)):
-        #     return None
-        #
-        #
         # for action in possible_actions:
-        #     if self.computeQValueFromValues(state, action) == self.values[state]:
-        #         if(not(self.mdp.isTerminal(state) and action == 'exit')):
-        #             return(action)
+        #     sum = 0.
+        #     for (next_state,proba) in self.mdp.getTransitionStatesAndProbs(state, action):
+        #         sum+= proba*(self.mdp.getReward(state, action, next_state) + self.discount * self.values[next_state])
+        #
+        #     if(abs(sum - self.values[state])<0.01):
+        #         return action
+
+
+
+        for action in possible_actions:
+            if abs(self.computeQValueFromValues(state, action) - self.values[state]) < 0.01:
+                return(action)
 
     def getPolicy(self, state):
         return self.computeActionFromValues(state)
