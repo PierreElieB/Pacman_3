@@ -1,18 +1,4 @@
 ==================== Iteration 0 ====================
-Q-Values at iteration 0 for action 'west' are correct.   Student/correct solution:
-	q_values_k_0_action_west: """
-           illegal
-            0.0000
-           illegal
-"""
-
-Q-Values at iteration 0 for action 'north' are correct.   Student/correct solution:
-	q_values_k_0_action_north: """
-           illegal
-            0.0000
-           illegal
-"""
-
 Q-Values at iteration 0 for action 'east' are correct.   Student/correct solution:
 	q_values_k_0_action_east: """
            illegal
@@ -20,8 +6,8 @@ Q-Values at iteration 0 for action 'east' are correct.   Student/correct solutio
            illegal
 """
 
-Q-Values at iteration 0 for action 'south' are correct.   Student/correct solution:
-	q_values_k_0_action_south: """
+Q-Values at iteration 0 for action 'west' are correct.   Student/correct solution:
+	q_values_k_0_action_west: """
            illegal
             0.0000
            illegal
@@ -34,22 +20,22 @@ Q-Values at iteration 0 for action 'exit' are correct.   Student/correct solutio
             0.0000
 """
 
+Q-Values at iteration 0 for action 'north' are correct.   Student/correct solution:
+	q_values_k_0_action_north: """
+           illegal
+            0.0000
+           illegal
+"""
+
+Q-Values at iteration 0 for action 'south' are correct.   Student/correct solution:
+	q_values_k_0_action_south: """
+           illegal
+            0.0000
+           illegal
+"""
+
 ==================== Iteration 1 ====================
 Agent observed the transition (startState = (0, 0), action = exit, endState = TERMINAL_STATE, reward = 10.000000)
-
-Q-Values at iteration 1 for action 'west' are correct.   Student/correct solution:
-	q_values_k_1_action_west: """
-           illegal
-            0.0000
-           illegal
-"""
-
-Q-Values at iteration 1 for action 'north' are correct.   Student/correct solution:
-	q_values_k_1_action_north: """
-           illegal
-            0.0000
-           illegal
-"""
 
 Q-Values at iteration 1 for action 'east' are correct.   Student/correct solution:
 	q_values_k_1_action_east: """
@@ -58,8 +44,8 @@ Q-Values at iteration 1 for action 'east' are correct.   Student/correct solutio
            illegal
 """
 
-Q-Values at iteration 1 for action 'south' are correct.   Student/correct solution:
-	q_values_k_1_action_south: """
+Q-Values at iteration 1 for action 'west' are correct.   Student/correct solution:
+	q_values_k_1_action_west: """
            illegal
             0.0000
            illegal
@@ -72,22 +58,22 @@ Q-Values at iteration 1 for action 'exit' are correct.   Student/correct solutio
             1.0000
 """
 
+Q-Values at iteration 1 for action 'north' are correct.   Student/correct solution:
+	q_values_k_1_action_north: """
+           illegal
+            0.0000
+           illegal
+"""
+
+Q-Values at iteration 1 for action 'south' are correct.   Student/correct solution:
+	q_values_k_1_action_south: """
+           illegal
+            0.0000
+           illegal
+"""
+
 ==================== Iteration 2 ====================
 Agent observed the transition (startState = (0, 1), action = south, endState = (0, 1), reward = 0.000000)
-
-Q-Values at iteration 2 for action 'west' are correct.   Student/correct solution:
-	q_values_k_2_action_west: """
-           illegal
-            0.0000
-           illegal
-"""
-
-Q-Values at iteration 2 for action 'north' are correct.   Student/correct solution:
-	q_values_k_2_action_north: """
-           illegal
-            0.0000
-           illegal
-"""
 
 Q-Values at iteration 2 for action 'east' are correct.   Student/correct solution:
 	q_values_k_2_action_east: """
@@ -96,8 +82,8 @@ Q-Values at iteration 2 for action 'east' are correct.   Student/correct solutio
            illegal
 """
 
-Q-Values at iteration 2 for action 'south' are correct.   Student/correct solution:
-	q_values_k_2_action_south: """
+Q-Values at iteration 2 for action 'west' are correct.   Student/correct solution:
+	q_values_k_2_action_west: """
            illegal
             0.0000
            illegal
@@ -110,22 +96,22 @@ Q-Values at iteration 2 for action 'exit' are correct.   Student/correct solutio
             1.0000
 """
 
+Q-Values at iteration 2 for action 'north' are correct.   Student/correct solution:
+	q_values_k_2_action_north: """
+           illegal
+            0.0000
+           illegal
+"""
+
+Q-Values at iteration 2 for action 'south' are correct.   Student/correct solution:
+	q_values_k_2_action_south: """
+           illegal
+            0.0000
+           illegal
+"""
+
 ==================== Iteration 3 ====================
 Agent observed the transition (startState = (0, 0), action = exit, endState = TERMINAL_STATE, reward = 10.000000)
-
-Q-Values at iteration 3 for action 'west' are correct.   Student/correct solution:
-	q_values_k_3_action_west: """
-           illegal
-            0.0000
-           illegal
-"""
-
-Q-Values at iteration 3 for action 'north' are correct.   Student/correct solution:
-	q_values_k_3_action_north: """
-           illegal
-            0.0000
-           illegal
-"""
 
 Q-Values at iteration 3 for action 'east' are correct.   Student/correct solution:
 	q_values_k_3_action_east: """
@@ -134,8 +120,8 @@ Q-Values at iteration 3 for action 'east' are correct.   Student/correct solutio
            illegal
 """
 
-Q-Values at iteration 3 for action 'south' are correct.   Student/correct solution:
-	q_values_k_3_action_south: """
+Q-Values at iteration 3 for action 'west' are correct.   Student/correct solution:
+	q_values_k_3_action_west: """
            illegal
             0.0000
            illegal
@@ -148,22 +134,22 @@ Q-Values at iteration 3 for action 'exit' are correct.   Student/correct solutio
             1.9000
 """
 
+Q-Values at iteration 3 for action 'north' are correct.   Student/correct solution:
+	q_values_k_3_action_north: """
+           illegal
+            0.0000
+           illegal
+"""
+
+Q-Values at iteration 3 for action 'south' are correct.   Student/correct solution:
+	q_values_k_3_action_south: """
+           illegal
+            0.0000
+           illegal
+"""
+
 ==================== Iteration 4 ====================
 Agent observed the transition (startState = (0, 0), action = exit, endState = TERMINAL_STATE, reward = 10.000000)
-
-Q-Values at iteration 4 for action 'west' are correct.   Student/correct solution:
-	q_values_k_4_action_west: """
-           illegal
-            0.0000
-           illegal
-"""
-
-Q-Values at iteration 4 for action 'north' are correct.   Student/correct solution:
-	q_values_k_4_action_north: """
-           illegal
-            0.0000
-           illegal
-"""
 
 Q-Values at iteration 4 for action 'east' are correct.   Student/correct solution:
 	q_values_k_4_action_east: """
@@ -172,8 +158,8 @@ Q-Values at iteration 4 for action 'east' are correct.   Student/correct solutio
            illegal
 """
 
-Q-Values at iteration 4 for action 'south' are correct.   Student/correct solution:
-	q_values_k_4_action_south: """
+Q-Values at iteration 4 for action 'west' are correct.   Student/correct solution:
+	q_values_k_4_action_west: """
            illegal
             0.0000
            illegal
@@ -186,22 +172,22 @@ Q-Values at iteration 4 for action 'exit' are correct.   Student/correct solutio
             2.7100
 """
 
+Q-Values at iteration 4 for action 'north' are correct.   Student/correct solution:
+	q_values_k_4_action_north: """
+           illegal
+            0.0000
+           illegal
+"""
+
+Q-Values at iteration 4 for action 'south' are correct.   Student/correct solution:
+	q_values_k_4_action_south: """
+           illegal
+            0.0000
+           illegal
+"""
+
 ==================== Iteration 5 ====================
 Agent observed the transition (startState = (0, 2), action = exit, endState = TERMINAL_STATE, reward = -10.000000)
-
-Q-Values at iteration 5 for action 'west' are correct.   Student/correct solution:
-	q_values_k_5_action_west: """
-           illegal
-            0.0000
-           illegal
-"""
-
-Q-Values at iteration 5 for action 'north' are correct.   Student/correct solution:
-	q_values_k_5_action_north: """
-           illegal
-            0.0000
-           illegal
-"""
 
 Q-Values at iteration 5 for action 'east' are correct.   Student/correct solution:
 	q_values_k_5_action_east: """
@@ -210,8 +196,8 @@ Q-Values at iteration 5 for action 'east' are correct.   Student/correct solutio
            illegal
 """
 
-Q-Values at iteration 5 for action 'south' are correct.   Student/correct solution:
-	q_values_k_5_action_south: """
+Q-Values at iteration 5 for action 'west' are correct.   Student/correct solution:
+	q_values_k_5_action_west: """
            illegal
             0.0000
            illegal
@@ -229,5 +215,19 @@ Q-Values at iteration 5 for action 'exit' are NOT correct.   Student solution:
            -1.0000
            illegal
             2.7100
+"""
+
+Q-Values at iteration 5 for action 'north' are correct.   Student/correct solution:
+	q_values_k_5_action_north: """
+           illegal
+            0.0000
+           illegal
+"""
+
+Q-Values at iteration 5 for action 'south' are correct.   Student/correct solution:
+	q_values_k_5_action_south: """
+           illegal
+            0.0000
+           illegal
 """
 

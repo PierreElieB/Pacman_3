@@ -119,7 +119,7 @@ class QLearningAgent(ReinforcementAgent):
           NOTE: You should never call this function,
           it will be called on your behalf
         """
-        self.q_values_m[str(state)+action] = (1.-self.alpha)*self.q_values_m[str(state)+action] + self.alpha *(reward + self.discount*self.computeValueFromQValues(nextState))
+        self.q_values_m[str(state)+action] = (1.-self.alpha)*self.getQValue(state,action) + self.alpha *(reward + self.discount*self.computeValueFromQValues(nextState))
 
     def getPolicy(self, state):
         return self.computeActionFromQValues(state)
@@ -191,7 +191,6 @@ class ApproximateQAgent(PacmanQAgent):
         featuresVector = self.featExtractor.getFeatures(state, action)
 
         if(self.weights=={}):
-            print(featuresVector)
 
             for key in featuresVector.keys():
                 self.weights[key] = 0.
@@ -203,7 +202,7 @@ class ApproximateQAgent(PacmanQAgent):
         if(len(possible_actions)==0):
             difference = reward - q_value
         else:
-            difference = (reward+self.discount * difference * max([self.getQValue(nextState, action) for action in possible_actions])) - q_value
+            difference = (reward + self.discount * max([self.getQValue(nextState, action) for action in possible_actions])) - q_value
 
         for item, value in self.weights.items():
             self.weights[item] = value + self.alpha * difference * featuresVector[item]
@@ -216,6 +215,5 @@ class ApproximateQAgent(PacmanQAgent):
         # did we finish training?
         if self.episodesSoFar == self.numTraining:
             # you might want to print your weights here for debugging
-            "*** YOUR CODE HERE ***"
             print("weights")
             print(self.weights)
